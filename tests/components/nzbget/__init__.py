@@ -16,26 +16,26 @@ from tests.common import MockConfigEntry
 ENTRY_CONFIG = {
     CONF_HOST: "10.10.10.30",
     CONF_NAME: "GetNZBsTest",
-    CONF_PASSWORD: None,
+    CONF_PASSWORD: "",
     CONF_PORT: 6789,
     CONF_SCAN_INTERVAL: 5,
     CONF_SSL: False,
-    CONF_USERNAME: None,
+    CONF_USERNAME: "",
 }
 
 MOCK_VERSION = "21.0"
 
 MOCK_STATUS = {
-    "ArticleCacheMB": "",
-    "AverageDownloadRate": "",
-    "DownloadPaused": "",
-    "DownloadRate": "",
-    "DownloadedSizeMB": "",
-    "FreeDiskSpaceMB": "",
-    "PostJobCount": "",
-    "PostPaused": "",
-    "RemainingSizeMB": "",
-    "UpTimeSec": "",
+    "ArticleCacheMB": "64",
+    "AverageDownloadRate": "512",
+    "DownloadPaused": "4",
+    "DownloadRate": "1000",
+    "DownloadedSizeMB": "256",
+    "FreeDiskSpaceMB": "1024",
+    "PostJobCount": "2",
+    "PostPaused": "4",
+    "RemainingSizeMB": "512",
+    "UpTimeSec": "600",
 }
 
 MOCK_HISTORY = [
