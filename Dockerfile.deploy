@@ -5,7 +5,8 @@ WORKDIR /usr/src
 ## Setup Home Assistant
 COPY . homeassistant/
 RUN \
-    && pip3 uninstall -y typing uuid \
-    && pip3 install --no-cache-dir --no-index --only-binary=:all: \
+    pip3 install -r homeassistant/requirements_all.txt && \
+    pip3 uninstall -y typing uuid \
+    && pip3 install \
     -e ./homeassistant \
     && python3 -m compileall homeassistant/homeassistant
