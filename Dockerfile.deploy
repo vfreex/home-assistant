@@ -1,0 +1,11 @@
+FROM homeassistant/home-assistant:dev
+
+WORKDIR /usr/src
+
+## Setup Home Assistant
+COPY . homeassistant/
+RUN \
+    && pip3 uninstall -y typing uuid \
+    && pip3 install --no-cache-dir --no-index --only-binary=:all: \
+    -e ./homeassistant \
+    && python3 -m compileall homeassistant/homeassistant
